@@ -3,172 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Showland Productions</title>
+<title>Showland Productions | Music Discovery</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0c;color:#e6e6e6}
-header{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#121214,#0b0b0c)}
-h1{font-size:48px;margin:0}
-nav{margin-top:20px}
-nav a{margin:0 12px;color:#aaa;text-decoration:none;font-weight:500}
-section{padding:70px 20px;max-width:1100px;margin:auto}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-.card{background:#151518;padding:24px;border-radius:12px}
-button{background:#6b7cff;border:none;padding:12px 22px;border-radius:8px;color:white;font-weight:600;cursor:pointer}
-.hero-sub{color:#9aa0a6;margin-top:12px;font-size:18px}
-.playlist iframe{border-radius:12px;width:100%;height:380px}
-footer{text-align:center;padding:40px 20px;color:#777}
-form{display:flex;flex-direction:column;gap:12px;max-width:500px}
-input,textarea{padding:10px;border-radius:6px;border:none}
+body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0c;color:#e6e6e6;}
+header{padding:60px 20px;text-align:center;background:radial-gradient(circle at top,#1b1b20,#0b0b0c);position:sticky;top:0;z-index:999;}
+header h1{font-size:52px;margin:0;letter-spacing:-1px;}
+nav{margin-top:20px;}
+nav a{margin:0 14px;color:#aaa;text-decoration:none;font-weight:500;transition:0.3s;}
+nav a:hover{color:#6b7cff;}
+.hero-sub{color:#9aa0a6;margin-top:12px;font-size:18px;}
+.cta-buttons{margin-top:24px;}
+button{background:#6b7cff;border:none;padding:12px 24px;border-radius:8px;color:white;font-weight:600;cursor:pointer;margin:6px;transition:0.3s;}
+button:hover{background:#5866d4;}
+section{padding:80px 20px;max-width:1200px;margin:auto;}
+h2{font-size:36px;margin-bottom:20px;}
+.track-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+.track-card{background:#151518;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;transition:transform 0.2s;}
+.track-card:hover{transform:translateY(-6px);}
+.track-card img{width:100%;display:block;}
+.track-info{padding:12px;}
+.track-info h3{margin:0 0 4px 0;color:#6b7cff;font-size:18px;}
+.track-info p{margin:0;color:#aaa;font-size:14px;}
+.track-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(11,11,12,0.85);color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;opacity:0;transition:opacity 0.2s;}
+.track-card:hover .track-overlay{opacity:1;}
+.track-overlay button{margin-top:12px;}
+.filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px;}
+.filters button{background:#1f1f23;color:#aaa;}
+.filters button.active, .filters button:hover{background:#6b7cff;color:white;}
+footer{text-align:center;padding:50px 20px;color:#777;}
 </style>
 </head>
-
 <body>
 
 <header>
 <h1>Showland Productions</h1>
-<p class="hero-sub">Playlists • Music Discovery • Sync Licensing • Web3 Music</p>
+<p class="hero-sub">Cinematic Music Discovery & Sync Licensing</p>
+<div class="cta-buttons">
+<button onclick="document.getElementById('submit').scrollIntoView({behavior:'smooth'})">Submit Music</button>
+<button onclick="document.getElementById('sync').scrollIntoView({behavior:'smooth'})">License Music</button>
+</div>
 <nav>
 <a href="#about">About</a>
-<a href="#playlists">Playlists</a>
-<a href="#catalog">Music Catalog</a>
+<a href="#tracks">Tracks</a>
 <a href="#sync">Sync Licensing</a>
 <a href="#synccoin">SyncCoin</a>
-<a href="#submit">Submit Music</a>
+<a href="#submit">Submit</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section id="about">
 <h2>About Showland</h2>
-<p>Showland Productions curates cinematic playlists and connects independent artists with film, television, trailer and game studios. Our mission is to discover powerful music and help it reach visual storytellers around the world.</p>
-
-<div class="card-grid">
-<div class="card">
-<h3>Playlist Curation</h3>
-<p>We curate genre based playlists designed for emotional storytelling and film style listening.</p>
-</div>
-
-<div class="card">
-<h3>Music Discovery</h3>
-<p>Artists submit music to be considered for Showland playlists and licensing opportunities.</p>
-</div>
-
-<div class="card">
-<h3>Sync Licensing</h3>
-<p>Direct licensing opportunities for films, trailers, ads, television, YouTube creators and video games.</p>
-</div>
-</div>
+<p>Showland Productions is a cinematic music discovery platform connecting independent artists with film, TV, trailer, and game studios. Discover new music and help it reach visual storytellers worldwide.</p>
 </section>
 
-<section id="playlists">
-<h2>Featured Playlists</h2>
-<p>Embed your Spotify playlists below.</p>
-
-<div class="playlist">
-<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO" allow="encrypted-media"></iframe>
+<section id="tracks">
+<h2>Discover Tracks</h2>
+<div class="filters">
+<button class="active" data-genre="All">All</button>
+<button data-genre="Cinematic">Cinematic</button>
+<button data-genre="Indie">Indie</button>
+<button data-genre="Trailer">Trailer</button>
+<button data-genre="Ambient">Ambient</button>
+<button data-genre="Piano">Piano</button>
 </div>
-
-<div class="card-grid" style="margin-top:40px">
-<div class="card">
-<h3>Cinematic</h3>
-<p>Epic and emotional tracks perfect for film scenes.</p>
-</div>
-
-<div class="card">
-<h3>Indie Film Vibes</h3>
-<p>Intimate indie tracks for storytelling and mood.</p>
-</div>
-
-<div class="card">
-<h3>Dark Trailer Music</h3>
-<p>Intense cinematic trailer style compositions.</p>
-</div>
-
-<div class="card">
-<h3>Emotional Piano</h3>
-<p>Minimal piano driven emotional pieces.</p>
-</div>
-</div>
-</section>
-
-<section id="catalog">
-<h2>Sync Ready Music Catalog</h2>
-<p>Music supervisors and filmmakers can explore genres available for licensing.</p>
-
-<div class="card-grid">
-<div class="card"><h3>Cinematic</h3></div>
-<div class="card"><h3>Indie</h3></div>
-<div class="card"><h3>Electronic</h3></div>
-<div class="card"><h3>Ambient</h3></div>
-<div class="card"><h3>Trailer</h3></div>
-</div>
+<div class="track-grid" id="trackGrid"></div>
 </section>
 
 <section id="sync">
 <h2>Sync Licensing</h2>
-<p>Showland Productions offers music licensing for film, television, advertising, trailers and games.</p>
-
-<ul>
-<li>Feature Films</li>
-<li>Television</li>
-<li>Advertising Campaigns</li>
-<li>Movie Trailers</li>
-<li>Game Soundtracks</li>
-<li>YouTube / Creator Content</li>
-</ul>
+<p>Showland provides licensing for films, trailers, TV, ads, and video games. Contact us for collaboration opportunities.</p>
+<p>Email: <span style="color:#6b7cff">sync@showlandproductions.com</span></p>
 </section>
 
 <section id="synccoin">
 <h2>SyncCoin ($SYNC)</h2>
-<p>SyncCoin powers the Showland music ecosystem.</p>
-
-<div class="card-grid">
-<div class="card">
-<h3>Artist Rewards</h3>
-<p>Artists featured in playlists and licensed in films earn SYNC rewards.</p>
-</div>
-
-<div class="card">
-<h3>Community Voting</h3>
-<p>SYNC holders vote on tracks to feature in playlists.</p>
-</div>
-
-<div class="card">
-<h3>Film Funding</h3>
-<p>SYNC can help fund indie films that use Showland music.</p>
-</div>
-
-<div class="card">
-<h3>Music Discovery</h3>
-<p>Fans help surface the best independent music.</p>
-</div>
-</div>
+<p>SYNC powers the Showland ecosystem, rewarding artists, curators, and fans participating in music discovery.</p>
 </section>
 
 <section id="submit">
 <h2>Submit Your Music</h2>
-<p>Artists can submit music for playlist consideration and sync opportunities.</p>
-
-<form>
-<input placeholder="Artist Name" required>
-<input placeholder="Email" required>
-<input placeholder="Spotify / Streaming Link" required>
-<textarea placeholder="Tell us about your track"></textarea>
+<form action="https://formspree.io/f/yourformid" method="POST">
+<input type="text" name="artist" placeholder="Artist Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="text" name="song" placeholder="Spotify / Streaming Link" required>
+<textarea name="message" placeholder="Tell us about your track"></textarea>
 <button type="submit">Submit Track</button>
 </form>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p>Licensing inquiries and partnerships.</p>
-
-<p>Email: sync@showlandproductions.com</p>
+<p>Licensing, partnerships, and inquiries: <span style="color:#6b7cff">sync@showlandproductions.com</span></p>
 </section>
 
 <footer>
-<p>© Showland Productions</p>
+<p>© 2026 Showland Productions</p>
 </footer>
+
+<script>
+const tracks = [
+  {title:'Midnight Skyline',artist:'John Doe',genre:'Cinematic',img:'https://via.placeholder.com/300x300',preview:'https://open.spotify.com/embed/track/placeholder'},
+  {title:'Silent Echoes',artist:'Jane Smith',genre:'Ambient',img:'https://via.placeholder.com/300x300',preview:'https://open.spotify.com/embed/track/placeholder'},
+  {title:'Fragments',artist:'Indie Artist',genre:'Indie',img:'https://via.placeholder.com/300x300',preview:'https://open.spotify.com/embed/track/placeholder'},
+  {title:'Dark Horizon',artist:'Composer X',genre:'Trailer',img:'https://via.placeholder.com/300x300',preview:'https://open.spotify.com/embed/track/placeholder'},
+  {title:'Emotional Keys',artist:'Piano Artist',genre:'Piano',img:'https://via.placeholder.com/300x300',preview:'https://open.spotify.com/embed/track/placeholder'}
+];
+
+const trackGrid = document.getElementById('trackGrid');
+const filterButtons = document.querySelectorAll('.filters button');
+
+function displayTracks(filter='All'){
+  trackGrid.innerHTML='';
+  tracks.filter(t=>filter==='All'||t.genre===filter).forEach(track=>{
+    const card=document.createElement('div');
+    card.className='track-card';
+    card.innerHTML=`
+      <img src='${track.img}' alt='${track.title}'>
+      <div class='track-info'>
+        <h3>${track.title}</h3>
+        <p>${track.artist} | ${track.genre}</p>
+      </div>
+      <div class='track-overlay'>
+        <iframe src='${track.preview}' width='200' height='80' frameborder='0' allow='encrypted-media'></iframe>
+        <button onclick='alert("Request license for ${track.title}")'>License Track</button>
+      </div>
+    `;
+    trackGrid.appendChild(card);
+  });
+}
+
+filterButtons.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filterButtons.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    displayTracks(btn.dataset.genre);
+  });
+});
+
+displayTracks();
+</script>
 
 </body>
 </html>
