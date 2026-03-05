@@ -1,194 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Showland Productions | SyncCoin Music Ecosystem</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showland Productions</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
-
-:root{
---bg:#050505;
---card:#111;
---accent:#d4af37;
---muted:#9a9a9a;
---border:#262626;
-}
-
-*{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:Inter, sans-serif;
-background:var(--bg);
-color:white;
-}
-
-header{
-padding:28px 40px;
-border-bottom:1px solid var(--border);
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:22px;
-font-weight:700;
-letter-spacing:2px;
-}
-
-nav a{
-margin-left:22px;
-text-decoration:none;
-color:var(--accent);
-font-size:14px;
-}
-
-.hero{
-padding:120px 20px 100px 20px;
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.hero p{
-color:var(--muted);
-font-size:18px;
-line-height:1.6;
-}
-
-.button{
-display:inline-block;
-padding:14px 26px;
-margin-top:30px;
-background:var(--accent);
-color:black;
-text-decoration:none;
-border-radius:6px;
-font-weight:600;
-}
-
-section{
-padding:80px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-h2{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.section-desc{
-color:var(--muted);
-margin-bottom:40px;
-max-width:650px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
-}
-
-.card{
-background:var(--card);
-padding:28px;
-border-radius:10px;
-border:1px solid var(--border);
-}
-
-.card h3{
-color:var(--accent);
-margin-top:0;
-}
-
-.tag{
-display:inline-block;
-padding:5px 10px;
-border-radius:5px;
-font-size:12px;
-border:1px solid var(--border);
-margin:4px;
-color:#ddd;
-}
-
-.playlist{
-margin-bottom:40px;
-}
-
-iframe{
-width:100%;
-height:152px;
-border:none;
-border-radius:10px;
-}
-
-.token-box{
-background:var(--card);
-border:1px solid var(--border);
-padding:30px;
-border-radius:10px;
-margin-top:25px;
-}
-
-.token-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-margin-top:30px;
-}
-
-.stat{
-background:#0c0c0c;
-padding:20px;
-border-radius:8px;
-border:1px solid var(--border);
-text-align:center;
-}
-
-.stat h4{
-margin:0;
-color:var(--accent);
-}
-
-form input, form textarea{
-width:100%;
-padding:12px;
-margin-top:6px;
-margin-bottom:18px;
-background:#0c0c0c;
-border:1px solid var(--border);
-color:white;
-border-radius:6px;
-}
-
-footer{
-text-align:center;
-padding:60px 20px;
-border-top:1px solid var(--border);
-color:var(--muted);
-margin-top:80px;
-}
-
+body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0c;color:#e6e6e6}
+header{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#121214,#0b0b0c)}
+h1{font-size:48px;margin:0}
+nav{margin-top:20px}
+nav a{margin:0 12px;color:#aaa;text-decoration:none;font-weight:500}
+section{padding:70px 20px;max-width:1100px;margin:auto}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.card{background:#151518;padding:24px;border-radius:12px}
+button{background:#6b7cff;border:none;padding:12px 22px;border-radius:8px;color:white;font-weight:600;cursor:pointer}
+.hero-sub{color:#9aa0a6;margin-top:12px;font-size:18px}
+.playlist iframe{border-radius:12px;width:100%;height:380px}
+footer{text-align:center;padding:40px 20px;color:#777}
+form{display:flex;flex-direction:column;gap:12px;max-width:500px}
+input,textarea{padding:10px;border-radius:6px;border:none}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">SHOWLAND</div>
+<h1>Showland Productions</h1>
+<p class="hero-sub">Playlists • Music Discovery • Sync Licensing • Web3 Music</p>
 <nav>
 <a href="#about">About</a>
 <a href="#playlists">Playlists</a>
-<a href="#catalog">Catalog</a>
+<a href="#catalog">Music Catalog</a>
 <a href="#sync">Sync Licensing</a>
 <a href="#synccoin">SyncCoin</a>
 <a href="#submit">Submit Music</a>
@@ -196,211 +39,135 @@ margin-top:80px;
 </nav>
 </header>
 
-<section class="hero">
-<h1>Cinematic Music Discovery for Film & Web3</h1>
-<p>Showland Productions curates cinematic playlists, connects filmmakers with independent artists, and powers a new music economy using SyncCoin.</p>
-<a class="button" href="#submit">Submit Your Music</a>
-</section>
-
 <section id="about">
-<h2>What Showland Does</h2>
-<p class="section-desc">Showland is building a discovery platform for cinematic music used in films, trailers, and streaming series.</p>
+<h2>About Showland</h2>
+<p>Showland Productions curates cinematic playlists and connects independent artists with film, television, trailer and game studios. Our mission is to discover powerful music and help it reach visual storytellers around the world.</p>
 
-<div class="grid">
-
+<div class="card-grid">
 <div class="card">
 <h3>Playlist Curation</h3>
-<p>Curated Spotify playlists focused on cinematic and emotional music.</p>
+<p>We curate genre based playlists designed for emotional storytelling and film style listening.</p>
 </div>
 
 <div class="card">
 <h3>Music Discovery</h3>
-<p>Film editors and supervisors discover new artists through Showland playlists.</p>
+<p>Artists submit music to be considered for Showland playlists and licensing opportunities.</p>
 </div>
 
 <div class="card">
 <h3>Sync Licensing</h3>
-<p>Artists in our catalog can be licensed for film, TV, trailers, games, and ads.</p>
+<p>Direct licensing opportunities for films, trailers, ads, television, YouTube creators and video games.</p>
 </div>
-
-<div class="card">
-<h3>Web3 Music Economy</h3>
-<p>SyncCoin rewards artists, curators, and fans who participate in music discovery.</p>
-</div>
-
 </div>
 </section>
 
 <section id="playlists">
-<h2>Showland Playlists</h2>
-<p class="section-desc">Cinematic playlists built for filmmakers and soundtrack lovers.</p>
+<h2>Featured Playlists</h2>
+<p>Embed your Spotify playlists below.</p>
 
 <div class="playlist">
+<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO" allow="encrypted-media"></iframe>
+</div>
+
+<div class="card-grid" style="margin-top:40px">
+<div class="card">
 <h3>Cinematic</h3>
-<iframe src="https://open.spotify.com/embed/playlist/PLACEHOLDER"></iframe>
+<p>Epic and emotional tracks perfect for film scenes.</p>
 </div>
 
-<div class="playlist">
+<div class="card">
 <h3>Indie Film Vibes</h3>
-<iframe src="https://open.spotify.com/embed/playlist/PLACEHOLDER"></iframe>
+<p>Intimate indie tracks for storytelling and mood.</p>
 </div>
 
-<div class="playlist">
+<div class="card">
 <h3>Dark Trailer Music</h3>
-<iframe src="https://open.spotify.com/embed/playlist/PLACEHOLDER"></iframe>
+<p>Intense cinematic trailer style compositions.</p>
 </div>
 
-<div class="playlist">
+<div class="card">
 <h3>Emotional Piano</h3>
-<iframe src="https://open.spotify.com/embed/playlist/PLACEHOLDER"></iframe>
+<p>Minimal piano driven emotional pieces.</p>
 </div>
-
+</div>
 </section>
 
 <section id="catalog">
-<h2>Music Catalog</h2>
-<p class="section-desc">Example tracks available for sync licensing.</p>
+<h2>Sync Ready Music Catalog</h2>
+<p>Music supervisors and filmmakers can explore genres available for licensing.</p>
 
-<div class="grid">
-
-<div class="card">
-<h3>Midnight Skyline</h3>
-<p>Independent Composer</p>
-<span class="tag">Cinematic</span>
-<span class="tag">Trailer</span>
-<span class="tag">Epic</span>
-</div>
-
-<div class="card">
-<h3>Silent Echoes</h3>
-<p>Ambient Producer</p>
-<span class="tag">Ambient</span>
-<span class="tag">Film Score</span>
-</div>
-
-<div class="card">
-<h3>Fragments</h3>
-<p>Indie Artist</p>
-<span class="tag">Indie</span>
-<span class="tag">Drama</span>
-</div>
-
+<div class="card-grid">
+<div class="card"><h3>Cinematic</h3></div>
+<div class="card"><h3>Indie</h3></div>
+<div class="card"><h3>Electronic</h3></div>
+<div class="card"><h3>Ambient</h3></div>
+<div class="card"><h3>Trailer</h3></div>
 </div>
 </section>
 
 <section id="sync">
 <h2>Sync Licensing</h2>
-<p class="section-desc">Music available for film, television, trailers, advertising, and games.</p>
+<p>Showland Productions offers music licensing for film, television, advertising, trailers and games.</p>
 
-<div class="grid">
-
-<div class="card">
-<h3>Film</h3>
-<p>Feature films and documentaries.</p>
-</div>
-
-<div class="card">
-<h3>Television</h3>
-<p>Series and streaming platforms.</p>
-</div>
-
-<div class="card">
-<h3>Trailers</h3>
-<p>Epic and dramatic promotional trailers.</p>
-</div>
-
-<div class="card">
-<h3>Advertising</h3>
-<p>Commercial campaigns and branded content.</p>
-</div>
-
-<div class="card">
-<h3>Video Games</h3>
-<p>Atmospheric cinematic game soundtracks.</p>
-</div>
-
-</div>
+<ul>
+<li>Feature Films</li>
+<li>Television</li>
+<li>Advertising Campaigns</li>
+<li>Movie Trailers</li>
+<li>Game Soundtracks</li>
+<li>YouTube / Creator Content</li>
+</ul>
 </section>
 
 <section id="synccoin">
 <h2>SyncCoin ($SYNC)</h2>
-<p class="section-desc">The token powering the Showland music discovery ecosystem.</p>
+<p>SyncCoin powers the Showland music ecosystem.</p>
 
-<div class="token-grid">
-
-<div class="stat">
-<h4>1B</h4>
-<p>Total Supply</p>
+<div class="card-grid">
+<div class="card">
+<h3>Artist Rewards</h3>
+<p>Artists featured in playlists and licensed in films earn SYNC rewards.</p>
 </div>
 
-<div class="stat">
-<h4>40%</h4>
-<p>Community Rewards</p>
+<div class="card">
+<h3>Community Voting</h3>
+<p>SYNC holders vote on tracks to feature in playlists.</p>
 </div>
 
-<div class="stat">
-<h4>20%</h4>
-<p>Liquidity</p>
+<div class="card">
+<h3>Film Funding</h3>
+<p>SYNC can help fund indie films that use Showland music.</p>
 </div>
 
-<div class="stat">
-<h4>10%</h4>
-<p>Team</p>
+<div class="card">
+<h3>Music Discovery</h3>
+<p>Fans help surface the best independent music.</p>
 </div>
-
 </div>
-
-<div class="token-box">
-<h3>Utility</h3>
-<ul>
-<li>Artist rewards for playlist placement</li>
-<li>Music promotion and submissions</li>
-<li>Community voting on featured tracks</li>
-<li>Funding indie film soundtracks</li>
-<li>Future NFT soundtrack releases</li>
-</ul>
-</div>
-
 </section>
 
 <section id="submit">
-<h2>Artist Submissions</h2>
-<p class="section-desc">Submit your music for playlist consideration and sync opportunities.</p>
+<h2>Submit Your Music</h2>
+<p>Artists can submit music for playlist consideration and sync opportunities.</p>
 
 <form>
-<label>Artist Name</label>
-<input type="text" />
-
-<label>Email</label>
-<input type="email" />
-
-<label>Spotify / Streaming Link</label>
-<input type="text" />
-
-<label>Genre / Mood</label>
-<input type="text" />
-
-<label>Message</label>
-<textarea rows="5"></textarea>
-
-<button class="button" type="submit">Submit Music</button>
+<input placeholder="Artist Name" required>
+<input placeholder="Email" required>
+<input placeholder="Spotify / Streaming Link" required>
+<textarea placeholder="Tell us about your track"></textarea>
+<button type="submit">Submit Track</button>
 </form>
-
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p class="section-desc">For sync licensing inquiries, partnerships, or SyncCoin collaboration.</p>
+<p>Licensing inquiries and partnerships.</p>
 
-<p><b>Email:</b> sync@showlandproductions.com</p>
-
+<p>Email: sync@showlandproductions.com</p>
 </section>
 
 <footer>
-
-<p>© 2026 Showland Productions</p>
-<p>Cinematic Music Discovery • Sync Licensing • Web3 Music Economy</p>
-
+<p>© Showland Productions</p>
 </footer>
 
 </body>
